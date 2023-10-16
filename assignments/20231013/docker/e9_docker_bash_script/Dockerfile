@@ -1,5 +1,5 @@
 FROM debian
-COPY ./script.sh /
-RUN chmod +x /script.sh
-RUN ls
-CMD script.sh
+#VOLUME /scripts
+COPY scripts/script.sh /scripts/script.sh
+#CMD ./scripts/script.sh
+CMD /bin/bash scripts/script.sh
